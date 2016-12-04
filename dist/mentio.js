@@ -607,7 +607,7 @@ angular.module('mentio', [])
                     var menuEl = element[0];
                     var menuItemsList = menuEl.querySelector('ul');
                     var menuItem = (menuEl.querySelector('[mentio-menu-item].active') ||
-                        menuEl.querySelector('[data-mentio-menu-item].active'));
+                    menuEl.querySelector('[data-mentio-menu-item].active'));
 
                     if (scope.isFirstItemActive()) {
                         return menuItemsList.scrollTop = 0;
@@ -1222,9 +1222,6 @@ angular.module('mentio')
             div.appendChild(span);
 
             var rect = element.getBoundingClientRect();
-            console.log(element.offsetWidth);
-            console.log(rect.top, rect.right, rect.bottom, rect.left);
-            console.log(parseInt(computed.borderLeftWidth));
 
             var coordinates = {
                 top: span.offsetTop + parseInt(computed.borderTopWidth) + parseInt(computed.fontSize),
@@ -1264,3 +1261,4 @@ angular.module('mentio')
     }]);
 
 angular.module("mentio").run(["$templateCache", function($templateCache) {$templateCache.put("mentio-menu.tpl.html","<style>\n.scrollable-menu {\n    height: auto;\n    max-height: 300px;\n    overflow: auto;\n}\n\n.menu-highlighted {\n    font-weight: bold;\n}\n</style>\n<ul class=\"dropdown-menu scrollable-menu\" style=\"display:block\">\n    <li mentio-menu-item=\"item\" ng-repeat=\"item in items track by $index\">\n        <a class=\"text-primary\" ng-bind-html=\"item.label | mentioHighlight:typedTerm:\'menu-highlighted\' | unsafe\"></a>\n    </li>\n</ul>");}]);
+

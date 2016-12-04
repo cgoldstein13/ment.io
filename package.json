@@ -60,6 +60,28 @@
   },
   "dependencies": {},
   "description": "Mentions for Angular",
+  "name": "ment.io",
+  "version": "0.9.24",
+  "main": "dist/mentio.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "coveralls": "gulp coveralls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jeff-collins/ment.io.git"
+  },
+  "keywords": [
+    "angular",
+    "mentions",
+    "ment.io"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jeff-collins/ment.io/issues"
+  },
+  "homepage": "https://github.com/jeff-collins/ment.io",
   "devDependencies": {
     "connect-livereload": "^0.4.0",
     "express": "^4.1.2",
@@ -87,27 +109,5 @@
     "karma-script-launcher": "^0.1.0",
     "karma-threshold-reporter": "~0.1.7",
     "open": "0.0.5"
-  },
-  "gitHead": "ad2a0a98cee5f7779a78c62e9f9f4f8105bfa759",
-  "homepage": "https://github.com/jeff-collins/ment.io",
-  "keywords": [
-    "angular",
-    "mentions",
-    "ment.io"
-  ],
-  "license": "MIT",
-  "main": "dist/mentio.js",
-  "name": "ment.io",
-  "optionalDependencies": {},
-  "readme": "ment.io\n======\n\n[![Build Status](https://travis-ci.org/jeff-collins/ment.io.svg?branch=master)](https://travis-ci.org/jeff-collins/ment.io)\n[![Coverage Status](https://img.shields.io/coveralls/jeff-collins/ment.io.svg)](https://coveralls.io/r/jeff-collins/ment.io)\n\n@mentions and macros widget based on AngularJS, but with no dependencies on jQuery.  \n\nTo get started, add the following to your Controller to set up a scope variable called ```people```:\n\n```js\n$scope.people = [\n    { label: 'Joe'},\n    { label: 'Mike'},\n    { label: 'Diane'}\n]\n```\n\nThen add this to your html:\n\n```html\n<input type=\"text\" mentio \n mentio-typed-text=\"typedTerm\" \n mentio-items=\"people | filter:label:typedTerm\" \n ng-model=\"myval\"/>\n```\n\nNow you can type @ into your text field, and see a menu of choices.\n\nThere are many other options, including the ability to have multiple trigger characters, templates, binding your menu to an API, converting the selected item to markup, and more.  \n\nSee the <a href=\"http://jeff-collins.github.io/ment.io\">Ment.io Page</a> for a demo and more detailed documentation.\n\n\n",
-  "readmeFilename": "README.md",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jeff-collins/ment.io.git"
-  },
-  "scripts": {
-    "coveralls": "gulp coveralls",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "version": "0.9.24"
+  }
 }
